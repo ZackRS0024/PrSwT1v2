@@ -24,7 +24,7 @@ class ReservaServiceTest {
     private HabitacionService habitacionService;
 
     @InjectMocks
-    private ReservaService reservaService; // Mockito inyecta repository y habitacionService
+    private ReservaService reservaService;
 
     @BeforeAll
     public static void initAll() {
@@ -101,7 +101,7 @@ class ReservaServiceTest {
     @Test
     void testReservaExitosaSinDescuento() throws Exception {
         LocalDate entrada = LocalDate.of(2026, 5, 1);
-        LocalDate salida = LocalDate.of(2026, 5, 5); // 4 días → no aplica descuento
+        LocalDate salida = LocalDate.of(2026, 5, 5);
         Reserva reserva = new Reserva("cliente4", entrada, salida, "Simple");
 
         when(repository.getReservasPorCliente("cliente4")).thenReturn(List.of());

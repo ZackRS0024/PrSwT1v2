@@ -50,7 +50,7 @@ public class ReservaService {
 
         //Aplicar descuento si la reserva es mayor a 7 días
         if (dias > 7) {
-            reserva.setDescuentoAplicado(0.1 * dias); //10% por cada día > 7
+            reserva.setDescuentoAplicado(0.1 * dias);
         } else {
             reserva.setDescuentoAplicado(0.0);
         }
